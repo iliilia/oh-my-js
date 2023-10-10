@@ -14,7 +14,8 @@
     "quotes": ["error", "single"], // использовать одинарные кавычки
     "semi": 0, // точка с запятой в конце операторов
     "indent": ["error", 2, { "SwitchCase": 1 }], // отступы в коде из 4 пробелов с учетом switch...case
-    "arrow-parens": ["error", "as-needed"], // скобки вокруг единственного параметра стрелочной функции
+    "arrow-parens": 0, // скобки вокруг единственного параметра стрелочной функции
+    "arroe-spacing": "error",
     "object-curly-spacing": ["error", "always"], // пробелы между скобками в литералах объектов
     "array-bracket-spacing": ["error", "never"], // пробелы между скобками в массивах
     "quote-props": ["error", "as-needed"], // свойства объекта в кавычках или без кавычек

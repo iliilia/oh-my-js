@@ -1,4 +1,4 @@
-import { sample } from './utils.js'
+import { print, sample } from './utils.js'
 const words = ['car', 'cat', 'pen', 'pencil', 'open', 'close', 'dog', 'room', 'samsung', 'iphone']
 const hiddenWord = sample(words.slice(0, 9) )
 
@@ -7,7 +7,7 @@ const init = () => {
 
   const word = prompt('Enter your word.')
   const guessed = word === hiddenWord
-  console.log(guessed ? 'you win!' : 'you loose.')
+  print( '#container', guessed ? 'you win!' : 'you loose.')
 }
 
 document.addEventListener('DOMContentLoaded', init)
