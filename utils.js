@@ -2,7 +2,7 @@ export const sample = (items) => {
   return items[Math.floor(Math.random() * items.length)]
 }
 
-export const print= (selector, text)=>{
+export const print = (selector, text) => {
   const container = document.querySelector(selector)
-  container.innerHTML =container.innerHTML + text
+  container.innerHTML += text + '<br>'
 }
