@@ -3,22 +3,27 @@ const words = ['car', 'cat', 'pen', 'pencil', 'open', 'close', 'dog', 'room', 's
 let hiddenWord
 
 const startNewGame = () => {
-  clear('#container')
+  clear('.game-block--guess-word #container')
   hiddenWord = sample(words.slice(0, 3))
 }
 
 const startButton = () => {
-  return document.querySelector('button#start-new-game')
+  return document.querySelector('.game-block--guess-word button#start-new-game')
 }
 
 const wordInput = () => {
-  return document.querySelector('input#word')
+  return document.querySelector('.game-block--guess-word input#word')
 }
 
 const check = () => {
   const word = wordInput().value
   const guessed = word === hiddenWord
-  print('#container', guessed ? `${word} you win[$_$]` : `${word} you loose[x_x]`)
+  print(
+    '.game-block--guess-word #container',
+    guessed ?
+      `Congratulations! You win! The word '${word}' is right` :
+      `Sorry, the word '${word}' is wrong`
+  )
 }
 
 const init = () => {
